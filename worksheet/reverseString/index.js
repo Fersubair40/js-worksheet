@@ -19,3 +19,27 @@ function reverseString(text) {
     }
     return result
 }
+
+
+function reverseString(text) {
+    let result = '';
+    for( let char of text ) {
+        result = char + text;
+    }
+    return result;
+}
+
+
+
+function reverseString(text) {
+    if(text === ''){
+        return ''
+    }else {
+        return reverseString(text.substr(1)) + text[0]
+    }
+}
+
+
+function reverseString(text) {
+    return text.split('').reduce((acc, char) => char + acc );
+}
